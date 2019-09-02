@@ -1,2 +1,77 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css?family=Nunito);div.nav a {
+  font-size: 18px;
+}
+
+div.masthead {
+  height: 100vh;
+  min-height: 400px;
+  background-image: url(/images/herobg.jpg?e605673c46e2f21dc85445cfd1e831bf);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.masthead div.overlay {
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+div.masthead div.overlay h2 {
+  text-shadow: 2px 2px 2px #000;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+header .logo {
+  text-align: center;
+}
+
+header .phone {
+  text-align: center;
+}
+
+header ul.nav {
+  justify-content: center;
+}
+
+header ul.nav li:last-child > a {
+  padding-right: 0px;
+}
+
+header ul.nav li:first-child > a {
+  padding-left: 0px;
+}
+
+btn.red {
+  background-color: #BF0201;
+}
+
+div.testimonials,
+div.footer {
+  background: #1D843B;
+  color: #fff;
+}
+
+div.footer p {
+  font-size: 18px;
+}
+
+@media (min-width: 992px) {
+  header .logo {
+    text-align: left;
+  }
+
+  header .phone {
+    text-align: right;
+  }
+
+  div.masthead {
+    margin-top: -100px;
+  }
+
+  div.masthead div.overlay {
+    padding-top: 80px;
+  }
+}
 

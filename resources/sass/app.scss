@@ -3,3 +3,86 @@
 
 // Variables
 @import 'variables';
+
+div.nav {
+  a {
+    font-size: 18px;
+  }
+}
+
+div.masthead {
+  height: 100vh;
+  min-height: 400px;
+  background-image: url('../images/herobg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  div.overlay {
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+
+    h2 {
+      text-shadow: 2px 2px 2px #000;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+  }
+}
+
+header {
+  .logo {
+    text-align: center;
+  }
+  .phone {
+    text-align: center;
+  }
+
+  ul.nav {
+    justify-content: center;
+  }
+
+  ul.nav li:last-child > a {
+    padding-right: 0px;
+  }
+
+  ul.nav li:first-child > a {
+    padding-left: 0px;
+  }
+}
+
+btn.red {
+  background-color: $red;
+}
+
+div.testimonials, div.footer {
+  background: $green;
+  color: #fff;
+}
+
+div.footer p {
+  font-size: 18px;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+  header {
+    .logo {
+      text-align: left;
+    }
+
+    .phone {
+      text-align: right;
+    }
+  }
+
+  div.masthead {
+    margin-top: -100px;
+
+    div.overlay {
+      padding-top: 80px;
+    }
+  }
+}
