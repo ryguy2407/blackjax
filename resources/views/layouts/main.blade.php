@@ -5,63 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta description="@yield('description')">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Blackjax Fun Casino - Townsville's favourite corporate entertainment</title>
+    <title>Blackjax Fun Casino - @yield('title')</title>
 </head>
 <body>
 
-<header>
-    <div class="container py-5">
-
-        <div class="row">
-            <div class="col-lg">
-                <div class="logo">
-                    <img src="/images/logo.png" style="width: 350px;" alt="Blackjax Fun Casino - Townsville">
-                </div>
-            </div>
-
-            <div class="col-lg">
-                <div class="phone">
-                    <h2 style="font-weight: 800;">Ph: 0432 678 846</h2>
-                </div>
-
-                <ul class="nav justify-content-lg-end">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Team Building</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Games</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div><!-- end container -->
-</header>
+@include('partials/header')
 
 <div class="masthead mt-lg-n8 mb-5" style="height: 400px;">
     <div class="container">
         <div class="overlay col-lg-5 text-lg-left">
             <h2>
-                Make your next event a night they'll never forget
+                Make your next event special with
+                Townsville's favourite fun casino.
             </h2>
         </div>
     </div>
@@ -132,21 +93,36 @@
             <img src="/images/blackjack.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Blackjack</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">
+                    Our most popular table, book on its
+                    own or as a full package with one of
+                    our proffesional croupiers.
+                </p>
+                <a href="#" class="btn btn-primary btn-block font-weight-bold">See our blackjack table</a>
             </div>
         </div>
         <div class="card">
             <img src="/images/roulette.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Roulette</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">
+                    A hit at all parties, one of the easier
+                    games to get everyone involved.
+                    Can be booked with croupiers.
+                </p>
+                <a href="#" class="btn btn-primary btn-block font-weight-bold">See our roulette wheel</a>
             </div>
         </div>
         <div class="card">
             <img src="/images/funwheel.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                     <h5 class="card-title">Fun Wheel</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text">
+                    The easiest game to play and a great
+                    way for guests to break the ice. Hire
+                    stand alone or with croupiers.
+                </p>
+                <a href="#" class="btn btn-primary btn-block font-weight-bold">See our fun wheel</a>
             </div>
         </div>
     </div>

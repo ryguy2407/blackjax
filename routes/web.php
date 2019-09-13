@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('page', 'PageController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/{parent}/{slug}', 'PageController@show');
+Route::get('/{parent}', 'PageController@show');
+

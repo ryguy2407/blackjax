@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Page;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -23,7 +24,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.edit');
     }
 
     /**
@@ -38,14 +39,24 @@ class PageController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the page and populate with child and parent content
+     * if it exists.
      *
-     * @param  int  $id
+     * @param $parent
+     * @param $child
+     *
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
-    public function show($id)
+    public function show($parent = null, $child = null)
     {
-        //
+        $parent = Page::where('id', $parent)->orWhere('slug', $parent)->first();
+        $child = Page::where('id', $child)->orWhere('slug', $child)->first();
+
+        return view('pages.show')->with([
+            'parent' => $parent,
+            'child' => $child
+        ]);
     }
 
     /**
