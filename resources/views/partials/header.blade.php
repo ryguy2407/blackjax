@@ -4,7 +4,9 @@
         <div class="row">
             <div class="col-lg">
                 <div class="logo">
-                    <img src="/images/logo.png" style="width: 350px;" alt="Blackjax Fun Casino - Townsville">
+                    <a href="/">
+                        <img src="/images/logo.png" style="width: 350px;" alt="Blackjax Fun Casino - Townsville">
+                    </a>
                 </div>
             </div>
 
@@ -27,7 +29,7 @@
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Games</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="/games/roulette">Roulette</a>
-                            <a class="dropdown-item" href="/games/blackjax">Blackjax</a>
+                            <a class="dropdown-item" href="/games/blackjack">Blackjack</a>
                             <a class="dropdown-item" href="/games/fun-wheel">Fun Wheel</a>
                         </div>
                     </li>

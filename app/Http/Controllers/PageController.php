@@ -24,6 +24,7 @@ class PageController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Page::class);
         return view('pages.edit');
     }
 
@@ -50,12 +51,13 @@ class PageController extends Controller
      */
     public function show($parent = null, $child = null)
     {
-        $parent = Page::where('id', $parent)->orWhere('slug', $parent)->first();
-        $child = Page::where('id', $child)->orWhere('slug', $child)->first();
+        $page = ($child) ? $page = Page::where('id', $child)
+                ->orWhere('slug', $child)->firstOrFail() :
+            Page::where('id', $parent)
+                ->orWhere('slug', $parent)->firstOrFail();
 
         return view('pages.show')->with([
-            'parent' => $parent,
-            'child' => $child
+            'page' => $page
         ]);
     }
 
@@ -67,7 +69,9 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $page = Page::find($id);
+        $this->authorize('update', $page);
+        return view('pages.edit')->with('page', $page);
     }
 
     /**
@@ -79,7 +83,11 @@ class PageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $page = Page::find($id);
+        $this->authorize('update', $page);
+        $page->lb_content = $request->get('page');
+        $page->save();
+        return redirect(route('page.show', $id));
     }
 
     /**
