@@ -2,11 +2,6 @@
 
 @section('content')
 
-    <div style="position: absolute;top:20px;right:20px;">
-        @can('update', $page)
-        <a class="btn btn-primary" href="{{ route('page.edit', $page->id) }}">Edit this page</a>
-        @endcan
-    </div>
 
     <div class="container">
         <div class="row">
